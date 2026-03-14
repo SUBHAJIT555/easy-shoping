@@ -1,0 +1,109 @@
+/**
+ * Easy Shoping – Legal / policy pages (Terms, Privacy, Cookie, Return Policy)
+ * Same look as index, shop, contact, about
+ */
+
+.easyunbox-legal-page {
+  padding: 3rem 0 4rem;
+  background: #fff;
+}
+
+.easyunbox-legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.easyunbox-legal-title {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  padding-left: 1rem;
+  border-left: 4px solid #2d5a4a;
+}
+
+.easyunbox-legal-meta {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.easyunbox-legal-intro {
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.easyunbox-legal-section {
+  margin-bottom: 2rem;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  p {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #555;
+  }
+}
+
+.easyunbox-legal-list {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #555;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: #2d5a4a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.easyunbox-legal-content a {
+  color: #2d5a4a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.easyunbox-legal-content a:hover {
+  text-decoration: underline;
+}
+
+.easyunbox-legal-agreement {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.easyunbox-legal-agreement p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .easyunbox-legal-title {
+    border-left: none;
+    border-top: 4px solid #2d5a4a;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+}

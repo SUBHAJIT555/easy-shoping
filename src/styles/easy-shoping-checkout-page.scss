@@ -1,0 +1,189 @@
+/**
+ * Easy Shoping – Checkout page
+ * Overrides neo-brutalism checkout with forest green (#2d5a4a) and clean layout.
+ */
+
+$green: #2d5a4a;
+$green-dark: #234a3d;
+
+/* Page wrapper: breadcrumb + section */
+.tp-checkout-page-neo {
+  .breadcrumb__area {
+    background-color: #f8faf8 !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .breadcrumb__title {
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    padding-left: 0.75rem !important;
+    border-left: 4px solid $green !important;
+  }
+}
+
+/* Checkout section */
+.tp-checkout-area-neo {
+  background-color: #f8faf8 !important;
+  padding-top: 2rem;
+}
+
+/* Billing Details card */
+.tp-checkout-area-neo .tp-checkout-bill-area {
+  border: 1px solid #eee !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  background-color: #fff !important;
+  padding: 2rem 1.5rem !important;
+}
+
+.tp-checkout-area-neo .tp-checkout-bill-title {
+  border-bottom: none !important;
+  border-left: 4px solid $green !important;
+  padding-left: 0.75rem !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1.5rem !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  color: #1a1a1a !important;
+}
+
+/* Form inputs */
+.tp-checkout-area-neo .tp-checkout-input {
+  margin-bottom: 1.25rem !important;
+
+  label {
+    font-weight: 500 !important;
+    color: #333 !important;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+    padding: 0 1rem !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+
+    &:focus {
+      outline: none !important;
+      border-color: $green !important;
+      box-shadow: 0 0 0 3px rgba($green, 0.12) !important;
+    }
+  }
+
+  textarea {
+    min-height: 140px !important;
+    padding-top: 0.75rem !important;
+  }
+}
+
+/* Your Order card */
+.tp-checkout-area-neo .tp-checkout-place {
+  border: 1px solid #eee !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  background-color: #fff !important;
+  padding: 1.5rem 1.25rem !important;
+}
+
+.tp-checkout-area-neo .tp-checkout-place-title {
+  border-bottom: none !important;
+  border-left: 4px solid $green !important;
+  padding-left: 0.75rem !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  color: #1a1a1a !important;
+}
+
+/* Order list */
+.tp-checkout-area-neo .tp-order-info-list {
+  border: 1px solid #eee !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+
+  .tp-order-info-list-header {
+    border-bottom: 1px solid #eee !important;
+    padding: 0.75rem 1rem !important;
+    background: #f8faf8 !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+  }
+
+  .tp-order-info-list-desc {
+    padding: 0.6rem 1rem !important;
+    border-bottom: 1px solid #eee !important;
+    font-size: 0.9rem !important;
+  }
+
+  .tp-order-info-list-subtotal {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid #eee !important;
+    font-weight: 600 !important;
+  }
+
+  .tp-order-info-list-total {
+    padding: 1rem !important;
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+    background: rgba($green, 0.06) !important;
+    border-bottom: none !important;
+
+    span:last-child {
+      color: $green !important;
+    }
+  }
+}
+
+/* Ask for Quote / Return to shop buttons */
+.tp-checkout-area-neo .tp-checkout-btn-wrapper {
+  margin-top: 1.25rem !important;
+}
+
+.tp-checkout-area-neo .tp-checkout-btn {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  background-color: $green !important;
+  color: #fff !important;
+  padding: 0.75rem 1.5rem !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+  transition: background 0.2s, transform 0.2s !important;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px) !important;
+    box-shadow: none !important;
+    background-color: $green-dark !important;
+    color: #fff !important;
+  }
+
+  &:disabled {
+    opacity: 0.7 !important;
+  }
+}
+
+/* Empty cart – Return to shop (link styled as button) */
+.tp-checkout-area-neo .text-center .tp-checkout-btn {
+  display: inline-block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+
+/* Verify / coupon / login reveal (if visible on checkout) */
+.tp-checkout-area-neo .tp-checkout-verify-reveal {
+  border: 1px solid #eee !important;
+  border-radius: 10px !important;
+}
+
+.tp-checkout-area-neo .tp-checkout-verify-reveal button,
+.tp-checkout-area-neo .tp-checkout-coupon-form-reveal-btn,
+.tp-checkout-area-neo .tp-checkout-login-form-reveal-btn {
+  color: $green !important;
+
+  &::after {
+    background-color: $green !important;
+  }
+}

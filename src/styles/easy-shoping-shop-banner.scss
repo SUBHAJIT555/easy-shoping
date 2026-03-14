@@ -1,0 +1,121 @@
+/**
+ * Easy Shoping – Shop banner (category cards)
+ * No section background. Card style: image on top, content strip below.
+ */
+
+.easy-shoping-shop-banner {
+  padding: 3rem 0;
+
+  .row.g-4 {
+    align-items: stretch;
+  }
+
+  &__col-right {
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .easy-shoping-shop-banner__col-right .easy-shoping-banner-card--large {
+    flex: 1;
+    min-height: 380px;
+  }
+}
+
+/* ----- Card: image on top, content below ----- */
+.easy-shoping-banner-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: #2d5a4a;
+    box-shadow: 0 8px 24px rgba(45, 90, 74, 0.08);
+
+    .easy-shoping-banner-card__img {
+      transform: scale(1.03);
+    }
+
+    .easy-shoping-banner-card__arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.easy-shoping-banner-card__img-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.easy-shoping-banner-card--large .easy-shoping-banner-card__img-wrap {
+  padding-bottom: 72%;
+}
+
+@media (min-width: 992px) {
+  .easy-shoping-shop-banner__col-right .easy-shoping-banner-card--large .easy-shoping-banner-card__img-wrap {
+    flex: 1;
+    min-height: 0;
+    padding-bottom: 0;
+    height: auto;
+  }
+}
+
+.easy-shoping-banner-card__img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.easy-shoping-banner-card__content {
+  padding: 1rem 1.25rem;
+  flex-shrink: 0;
+}
+
+.easy-shoping-banner-card__label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2d5a4a;
+  margin-bottom: 0.25rem;
+}
+
+.easy-shoping-banner-card__title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.easy-shoping-banner-card--large .easy-shoping-banner-card__title {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+}
+
+.easy-shoping-banner-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2d5a4a;
+  margin-top: 0.5rem;
+  transition: gap 0.2s ease;
+}
+
+.easy-shoping-banner-card__arrow {
+  transition: transform 0.2s ease;
+}

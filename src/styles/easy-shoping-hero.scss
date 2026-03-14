@@ -1,0 +1,236 @@
+/**
+ * Easy Shoping – Hero section (light, minimal)
+ * Brand: Easy Shoping | easy-shoping.com
+ * Color scheme: warm cream + forest green accent
+ */
+
+/* Keep header above hero (avoid overlap on mobile) */
+#header-sticky.tp-header-area,
+.tp-header-area.tp-header-sticky {
+  z-index: 1000 !important;
+}
+
+.easy-shoping-hero {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  /* Grid + left & right gradient glow – full-bleed background */
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(to right, #f0f0f0 1px, transparent 1px),
+      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
+      radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
+      radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent);
+    background-size:
+      96px 64px,
+      96px 64px,
+      100% 100%,
+      100% 100%;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__domain {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2d5a4a;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-size: clamp(2.75rem, 7vw, 4.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: #1a1a1a;
+    margin: 0 0 1rem;
+  }
+
+  &__tagline {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    margin: 0 0 2rem;
+    line-height: 1.65;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &--primary {
+      background: #2d5a4a;
+      color: #fff;
+      border: 2px solid #2d5a4a;
+      box-shadow: 0 4px 14px rgba(45, 90, 74, 0.35);
+
+      &:hover {
+        background: #234a3d;
+        border-color: #234a3d;
+        color: #e8f0ee;
+        box-shadow: 0 8px 24px rgba(45, 90, 74, 0.4);
+      }
+    }
+
+    &--secondary {
+      background: #fff;
+      color: #1a1a1a;
+      border: 2px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+      &:hover {
+        border-color: #2d5a4a;
+        color: #2d5a4a;
+        background: rgba(45, 90, 74, 0.04);
+        box-shadow: 0 4px 12px rgba(45, 90, 74, 0.12);
+      }
+    }
+  }
+
+  &__badges {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #444;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 9999px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: rgba(45, 90, 74, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__badge-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2d5a4a;
+    flex-shrink: 0;
+  }
+}
+
+/* ----- Mobile: compact layout, less spacing, better readability ----- */
+@media (max-width: 767px) {
+  .easy-shoping-hero {
+    min-height: auto;
+    padding: 0 0 2.5rem;
+    align-items: flex-start;
+    padding-top: 5.5rem; /* below fixed header on mobile */
+  }
+
+  .easy-shoping-hero__inner {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .easy-shoping-hero__domain {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.4rem;
+  }
+
+  .easy-shoping-hero__title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .easy-shoping-hero__tagline {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .easy-shoping-hero__actions {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .easy-shoping-hero__btn {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  .easy-shoping-hero__badges {
+    gap: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .easy-shoping-hero__badge {
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.75rem;
+    justify-content: center;
+  }
+}

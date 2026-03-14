@@ -1,0 +1,268 @@
+/**
+ * Easy Shoping – Shopping Cart page
+ * Overrides neo-brutalism cart styles with forest green (#2d5a4a) and clean layout.
+ */
+
+$green: #2d5a4a;
+$green-dark: #234a3d;
+
+.tp-cart-page-neo {
+  /* Breadcrumb */
+  .breadcrumb__area {
+    background-color: #f8faf8 !important;
+    border-top: none !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .breadcrumb__title {
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    padding-left: 0.75rem !important;
+    border-left: 4px solid $green !important;
+  }
+
+  .tp-cart-area {
+    padding-top: 2rem;
+  }
+
+  /* Cart table container */
+  .tp-cart-list {
+    background-color: #fff !important;
+    border: 1px solid #eee !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+
+    & thead {
+      background-color: #f8faf8 !important;
+      border-bottom: 1px solid #eee !important;
+
+      & th {
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        color: #1a1a1a !important;
+      }
+    }
+
+    & tbody tr td {
+      border-color: #eee !important;
+    }
+
+    & .table > :not(caption) > * > * {
+      padding: 16px 12px;
+    }
+  }
+
+  /* Product image */
+  .tp-cart-img a,
+  .tp-cart-img > div {
+    background-color: #f8faf8 !important;
+    border: 1px solid #eee !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 8px !important;
+  }
+
+  .tp-cart-img {
+    padding-left: 1.25rem !important;
+  }
+
+  /* Product title */
+  .tp-cart-title a {
+    font-weight: 500 !important;
+    color: #1a1a1a !important;
+
+    &:hover {
+      color: $green !important;
+    }
+  }
+
+  /* Price */
+  .tp-cart-price span {
+    font-weight: 600 !important;
+    color: $green !important;
+  }
+
+  /* Quantity controls */
+  .tp-product-quantity .tp-cart-input {
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    background-color: #fff !important;
+  }
+
+  .tp-product-quantity .tp-cart-plus,
+  .tp-product-quantity .tp-cart-minus {
+    &:hover {
+      color: $green !important;
+    }
+  }
+
+  /* Remove button */
+  .tp-cart-action-btn {
+    border: 1px solid #e0e0e0 !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 8px 14px !important;
+    font-weight: 500 !important;
+    background-color: #fff !important;
+    color: #555 !important;
+    transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      background-color: rgba($green, 0.08) !important;
+      border-color: $green !important;
+      color: $green !important;
+    }
+  }
+
+  /* Clear Cart button */
+  .tp-cart-update-btn {
+    border: 2px solid $green !important;
+    box-shadow: none !important;
+    border-radius: 9999px !important;
+    background-color: transparent !important;
+    color: $green !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.25rem !important;
+    transition: background 0.2s, color 0.2s !important;
+
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      background-color: $green !important;
+      border-color: $green !important;
+      color: #fff !important;
+    }
+  }
+
+  /* Order summary / checkout sidebar */
+  .tp-cart-checkout-wrapper {
+    background-color: #fff !important;
+    border: 1px solid #eee !important;
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    padding: 1.5rem 1.25rem !important;
+    margin-left: 0 !important;
+  }
+
+  .tp-cart-checkout-top {
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 1px solid #eee !important;
+
+    &-title,
+    &-price {
+      font-weight: 600 !important;
+      color: #1a1a1a !important;
+    }
+  }
+
+  .tp-cart-checkout-shipping {
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
+
+    &-title {
+      font-weight: 600 !important;
+      color: #1a1a1a !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .tp-cart-checkout-shipping-option {
+    label span {
+      color: $green !important;
+      font-weight: 600;
+    }
+
+    label::after {
+      border: 2px solid #ccc !important;
+      border-radius: 50% !important;
+    }
+
+    input:checked + label::after {
+      border-color: $green !important;
+      background-color: transparent !important;
+    }
+
+    input:checked + label::before {
+      background-color: $green !important;
+    }
+  }
+
+  .tp-cart-checkout-total {
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+    color: #1a1a1a !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* Proceed to Checkout button */
+  .tp-cart-checkout-btn {
+    display: block !important;
+    text-align: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 9999px !important;
+    background-color: $green !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    transition: background 0.2s, transform 0.2s !important;
+
+    &:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: none !important;
+      background-color: $green-dark !important;
+      color: #fff !important;
+    }
+  }
+
+  /* Free shipping progress (cart list top) */
+  .cartmini__shipping {
+    .progress {
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 6px !important;
+      background-color: rgba($green, 0.12) !important;
+      height: 8px;
+    }
+
+    .progress-bar {
+      background-color: $green !important;
+      border-radius: 6px;
+    }
+
+    p {
+      font-weight: 500 !important;
+      color: #444 !important;
+
+      span {
+        color: $green !important;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* Empty cart – Continue Shopping */
+  .tp-cart-checkout-btn.mt-20 {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 9999px !important;
+    background-color: $green !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    padding: 0.75rem 1.5rem !important;
+
+    &:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: none !important;
+      background-color: $green-dark !important;
+      color: #fff !important;
+    }
+  }
+}

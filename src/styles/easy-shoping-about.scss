@@ -1,0 +1,102 @@
+/**
+ * Easy Shoping – About section
+ * Single image left, content right
+ */
+
+.easy-shoping-about {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.easy-shoping-about__img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 6 / 5;
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.easy-shoping-about__content {
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  max-width: 480px;
+  border-left: 3px solid #2d5a4a;
+}
+
+.easy-shoping-about__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #2d5a4a;
+  margin-bottom: 0.6rem;
+}
+
+.easy-shoping-about__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.easy-shoping-about__text {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #555;
+}
+
+.easy-shoping-about__text strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.easy-shoping-about__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2d5a4a;
+  border: 2px solid #2d5a4a;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(45, 90, 74, 0.2);
+
+  &:hover {
+    background: #234a3d;
+    border-color: #234a3d;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(45, 90, 74, 0.3);
+  }
+}
+
+.easy-shoping-about__btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.easy-shoping-about__btn:hover .easy-shoping-about__btn-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .easy-shoping-about__img-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .easy-shoping-about__content {
+    padding-left: 1rem;
+  }
+}

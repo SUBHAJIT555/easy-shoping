@@ -1,0 +1,94 @@
+/**
+ * Easy Shoping – Contact page design
+ */
+
+.easyunbox-contact {
+  padding: 3rem 0 4rem;
+  background: #fff;
+}
+
+.easyunbox-contact__form-wrap {
+  background: #f8faf8;
+  border: 1px solid #e8ece8;
+  border-radius: 16px;
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.easyunbox-contact__form-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  padding-left: 0.25rem;
+  border-left: 4px solid #2d5a4a;
+  padding-left: 1rem;
+}
+
+/* Contact form – Easy Shoping */
+.easyunbox-contact-form__field {
+  label {
+    color: #1a1a1a;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #2d5a4a;
+    box-shadow: 0 0 0 3px rgba(45, 90, 74, 0.12);
+  }
+}
+
+.easyunbox-contact-form__checkbox-label input[type="checkbox"] {
+  accent-color: #2d5a4a;
+}
+
+.easyunbox-contact-form__btn {
+  background: #2d5a4a;
+  border: 2px solid #2d5a4a;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+
+  &:hover:not(:disabled) {
+    background: #234a3d;
+    border-color: #234a3d;
+    transform: translateY(-2px);
+  }
+}
+
+.easyunbox-contact-form__btn:disabled {
+  opacity: 0.7;
+}
+
+/* Sidebar cards */
+.easyunbox-contact__card {
+  background: #f8faf8;
+  border: 1px solid #e8ece8;
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: rgba(45, 90, 74, 0.2);
+    box-shadow: 0 4px 20px rgba(45, 90, 74, 0.06);
+  }
+}
+
+.easyunbox-contact__card-icon {
+  background: rgba(45, 90, 74, 0.12);
+  color: #2d5a4a;
+  border-radius: 10px;
+}
+
+.easyunbox-contact__card-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.easyunbox-contact__card-text a:hover {
+  color: #2d5a4a;
+}

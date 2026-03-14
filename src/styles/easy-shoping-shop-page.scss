@@ -1,0 +1,211 @@
+/**
+ * Easy Shoping – Shop page (matches index design)
+ * Scoped under .page-shop: shop area, sidebar, pagination, product cards
+ * Breadcrumb: unchanged (uses default easyunbox-breadcrumb styles)
+ */
+
+/* ----- Shop area ----- */
+.page-shop .easyunbox-shop {
+  padding: 3rem 0 4rem;
+  background: #fff;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: #f8faf8;
+  border: 1px solid #e8ece8;
+  border-radius: 12px;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-title {
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(45, 90, 74, 0.15);
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-title.no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-categories ul li a:hover,
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-categories ul li a.active {
+  color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-filter-btn {
+  background: #2d5a4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-filter-btn:hover {
+  background: #234a3d;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-btn {
+  color: #2d5a4a !important;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-product-title a:hover {
+  color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop__sidebar .tp-shop-widget-product-price {
+  color: #2d5a4a;
+}
+
+/* ----- Shop top (grid/list tabs, sort) ----- */
+.page-shop .easyunbox-shop__top {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.page-shop .easyunbox-shop-tabs {
+  background: #f8faf8;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.page-shop .easyunbox-shop-tab.active {
+  background: #fff;
+  color: #2d5a4a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.page-shop .easyunbox-shop-tab:hover {
+  color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop-result {
+  color: #555;
+  font-size: 0.9375rem;
+}
+
+.page-shop .easyunbox-shop-sort .nice-select:focus,
+.page-shop .easyunbox-shop-sort .nice-select.open {
+  border-color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop-filter-btn {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #1a1a1a;
+  background: #fff;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.page-shop .easyunbox-shop-filter-btn:hover {
+  border-color: #2d5a4a;
+  color: #2d5a4a;
+}
+
+/* ----- Product cards (grid) ----- */
+.page-shop .easyunbox-shop .easyunbox-product-card--grid {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.page-shop .easyunbox-shop .easyunbox-product-card--grid:hover {
+  border-color: rgba(45, 90, 74, 0.2);
+  box-shadow: 0 8px 24px rgba(45, 90, 74, 0.08);
+}
+
+.page-shop .easyunbox-shop .easyunbox-product-card__thumb {
+  background: #f8faf8;
+}
+
+.page-shop .easyunbox-shop .easyunbox-product-card__action:hover,
+.page-shop .easyunbox-shop .easyunbox-product-card__action.active {
+  background: #2d5a4a !important;
+  color: #fff !important;
+}
+
+.page-shop .easyunbox-shop .easyunbox-product-card__title-link:hover {
+  color: #2d5a4a !important;
+}
+
+.page-shop .easyunbox-shop .easyunbox-product-card .new-price,
+.page-shop .easyunbox-shop .easyunbox-product-card__price {
+  color: #2d5a4a !important;
+}
+
+/* ----- List view ----- */
+.page-shop .easyunbox-shop__list .tp-product-list-item {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.page-shop .easyunbox-shop__list .tp-product-title-2 a:hover {
+  color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop__list .tp-product-list-add-to-cart-btn {
+  background: #2d5a4a;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.page-shop .easyunbox-shop__list .tp-product-list-add-to-cart-btn:hover {
+  background: #234a3d;
+}
+
+/* ----- Pagination ----- */
+.page-shop .easyunbox-shop__pagination .pagination-nav-btn,
+.page-shop .easyunbox-shop__pagination .pagination-page-btn {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  color: #555;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.page-shop .easyunbox-shop__pagination .pagination-nav-btn:hover:not(.disabled),
+.page-shop .easyunbox-shop__pagination .pagination-page-btn:hover {
+  border-color: #2d5a4a;
+  color: #2d5a4a;
+}
+
+.page-shop .easyunbox-shop__pagination .pagination-page-btn.active {
+  background: #2d5a4a;
+  border-color: #2d5a4a;
+  color: #fff;
+}
+
+/* ----- Empty state ----- */
+.page-shop .easyunbox-shop__empty {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ----- Filter offcanvas (mobile) – Easy Shoping accent ----- */
+.easyunbox-filter-offcanvas .tp-shop-widget-filter-btn,
+.easyunbox-filter-offcanvas .tp-btn {
+  background: #2d5a4a !important;
+  color: #fff !important;
+  border-color: #2d5a4a !important;
+}
+
+.easyunbox-filter-offcanvas .tp-shop-widget-categories ul li a:hover,
+.easyunbox-filter-offcanvas .tp-shop-widget-categories ul li a.active {
+  color: #2d5a4a !important;
+}
+
+.easyunbox-filter-offcanvas .easyunbox-filter-offcanvas__close:hover {
+  color: #2d5a4a;
+}
+

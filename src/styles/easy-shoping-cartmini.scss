@@ -1,0 +1,141 @@
+/**
+ * Easy Shoping – Cart mini sidebar (Shopping Cart popup)
+ */
+
+.cartmini__area {
+  background: #fff !important;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
+}
+
+.cartmini__top-title {
+  border-bottom-color: #eee !important;
+
+  h4 {
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid #2d5a4a;
+  }
+}
+
+.cartmini__close-btn {
+  color: #444 !important;
+
+  &:hover {
+    color: #2d5a4a !important;
+  }
+}
+
+.cartmini__shipping {
+  border-bottom-color: #eee !important;
+
+  p {
+    font-size: 0.875rem;
+    color: #555;
+
+    span {
+      color: #2d5a4a !important;
+      font-weight: 600;
+    }
+  }
+
+  .progress {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(45, 90, 74, 0.12);
+  }
+
+  .progress-bar {
+    background-color: #2d5a4a !important;
+    border-radius: 4px;
+  }
+}
+
+.cartmini__widget-item {
+  border-bottom-color: #eee !important;
+}
+
+.cartmini__thumb {
+  border-color: #eee !important;
+  border-radius: 8px;
+}
+
+.cartmini__title a:hover {
+  color: #2d5a4a !important;
+}
+
+.cartmini__price {
+  color: #2d5a4a !important;
+  font-weight: 600;
+}
+
+.cartmini__del:hover {
+  color: #2d5a4a !important;
+}
+
+.cartmini__checkout {
+  border-top-color: #eee !important;
+  border-top-width: 1px;
+}
+
+.cartmini__checkout-title h4,
+.cartmini__checkout-title span {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cartmini__checkout-btn .tp-btn {
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background-color: #2d5a4a !important;
+    border-color: #2d5a4a !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+
+  &.tp-btn-border {
+    background-color: #2d5a4a !important;
+    border: 2px solid #2d5a4a !important;
+    color: #fff !important;
+
+    &:hover {
+      background-color: #234a3d !important;
+      border-color: #234a3d !important;
+      color: #fff !important;
+    }
+  }
+
+  &:not(.tp-btn-border) {
+    background-color: #2d5a4a !important;
+    border: 2px solid #2d5a4a;
+    color: #fff;
+  }
+}
+
+.cartmini__empty {
+  .tp-btn {
+    background-color: #2d5a4a !important;
+    border: 2px solid #2d5a4a;
+    color: #fff !important;
+    border-radius: 9999px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+
+    &:hover {
+      background-color: #234a3d !important;
+      border-color: #234a3d;
+      color: #fff !important;
+      transform: translateY(-2px);
+    }
+  }
+
+  p {
+    color: #444;
+    font-size: 1rem;
+  }
+}

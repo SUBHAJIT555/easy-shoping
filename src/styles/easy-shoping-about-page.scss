@@ -1,0 +1,202 @@
+/**
+ * Easy Shoping – About page design (matches index/shop/contact)
+ */
+
+/* ----- Story section ----- */
+.easyunbox-about-page__story {
+  padding: 3rem 0 4rem;
+  background: #fff;
+}
+
+.easyunbox-about-page__img-main {
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: #f8faf8;
+}
+
+.easyunbox-about-page__img-thumb {
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  background: #f8faf8;
+}
+
+.easyunbox-about-page__content {
+  padding-left: 0.5rem;
+}
+
+.easyunbox-about-page__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #2d5a4a;
+  margin-bottom: 0.5rem;
+}
+
+.easyunbox-about-page__title {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #2d5a4a;
+}
+
+.easyunbox-about-page__text p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.easyunbox-about-page__cta {
+  background: #2d5a4a;
+  color: #fff;
+  border: 2px solid #2d5a4a;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(45, 90, 74, 0.25);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.easyunbox-about-page__cta:hover {
+  background: #234a3d;
+  border-color: #234a3d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ----- Mission section ----- */
+.easyunbox-about-page__mission {
+  padding: 4rem 0;
+  background: #f8faf8;
+  border-top: 1px solid #eee;
+}
+
+.easyunbox-about-page__mission-header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #2d5a4a;
+}
+
+.easyunbox-about-page__mission-header .easyunbox-about-page__label {
+  margin-bottom: 0.4rem;
+}
+
+.easyunbox-about-page__mission-title {
+  margin: 0.5rem 0 0 0;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.easyunbox-about-page__card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.easyunbox-about-page__card:hover {
+  border-color: rgba(45, 90, 74, 0.2);
+  box-shadow: 0 8px 24px rgba(45, 90, 74, 0.08);
+}
+
+.easyunbox-about-page__card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.easyunbox-about-page__card-text {
+  color: #555;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* ----- Why choose us ----- */
+.easyunbox-about-page__choose {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.easyunbox-about-page__choose-content {
+  padding-left: 0.5rem;
+}
+
+.easyunbox-about-page__choose-content .easyunbox-about-page__label {
+  margin-bottom: 0.4rem;
+}
+
+.easyunbox-about-page__choose-title {
+  margin: 0.5rem 0 1.25rem 0;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  padding-left: 1rem;
+  border-left: 4px solid #2d5a4a;
+}
+
+.easyunbox-about-page__choose-icon {
+  background: rgba(45, 90, 74, 0.12);
+  color: #2d5a4a;
+  border-radius: 8px;
+}
+
+.easyunbox-about-page__choose-list h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.easyunbox-about-page__choose-list p {
+  color: #555;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.easyunbox-about-page__choose-img {
+  border-radius: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: #f8faf8;
+}
+
+@media (max-width: 991px) {
+  .easyunbox-about-page__content {
+    padding-left: 0;
+  }
+
+  .easyunbox-about-page__title {
+    border-left: none;
+    border-top: 4px solid #2d5a4a;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+
+  .easyunbox-about-page__mission-header {
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid #2d5a4a;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+
+  .easyunbox-about-page__choose-content {
+    padding-left: 0;
+  }
+
+  .easyunbox-about-page__choose-title {
+    border-left: none;
+    border-top: 4px solid #2d5a4a;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+}
