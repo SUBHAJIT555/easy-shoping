@@ -22,7 +22,11 @@ const store = configureStore({
     order:orderSlice,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
+    getDefaultMiddleware({
+      // Dev-only: cart/wishlist state can be large; avoids noisy 32ms warnings
+      serializableCheck: { warnAfter: 128 },
+      immutableCheck: { warnAfter: 128 },
+    }).concat(apiSlice.middleware),
 });
 
 export default store;

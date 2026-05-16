@@ -1,10 +1,7 @@
-@import "slick-carousel/slick/slick.css"; 
-@import "swiper/css/bundle";
-@import 'react-modal-video/scss/modal-video.scss';
+/* Theme + app SCSS. Vendor plain CSS is imported in _app.jsx. */
 @import '../../public/assets/scss/main.scss';
 @import 'no-neobrutalism.scss';
 @import 'easy-unboxing-theme.scss';
-@import 'easy-shoping-hero.scss';
 @import 'easy-shoping-shop-banner.scss';
 @import 'easy-shoping-about.scss';
 @import 'easy-shoping-popular-products.scss';
