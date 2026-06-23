@@ -22,8 +22,10 @@ set_exception_handler(function ($e) {
 // --- CORS ---
 $origin  = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowed = [
-    'https://supreme-cart.com',
-    'https://www.supreme-cart.com',
+    'https://easy-shoping.com',
+    'https://www.easy-shoping.com',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
 ];
 if ($origin && in_array($origin, $allowed, true)) {
     header("Access-Control-Allow-Origin: $origin");
@@ -148,14 +150,14 @@ $smtpPass = $_ENV['SMTP_PASS'];
 $smtpPort = $_ENV['SMTP_PORT'];
 $smtpSecure = $_ENV['SMTP_SECURE'];
 
-$toAddresses = [['aditya@baharnani.com', 'Aditya Baharnani']];
+$toAddresses = [['info@easy-shoping.com', 'Easy Shoping']];
 $fromEmail = $smtpUser;
-$fromName  = 'Snap Gears Website';
+$fromName  = 'Easy Shoping';
 
 // --- Brand styling ---
-$brandName = 'Supreme Cart';
-$tagline   = 'Where Innovation Meets Excellence.';
-$brandColor = '#0a2540';
+$brandName = 'Easy Shoping';
+$tagline   = 'Your one-stop shop for tech, fashion, books, stationery & more.';
+$brandColor = '#1e40af';
 $muted = '#6b7280';
 $bg = '#f9fafb';
 $cardBg = '#ffffff';

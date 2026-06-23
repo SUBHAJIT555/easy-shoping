@@ -2,21 +2,22 @@ import React from "react";
 import Link from "next/link";
 import SEO from "@/components/seo";
 import { seoDescriptions } from "@/data/seo-descriptions";
+import { siteInfo, contactInfo } from "@/data/contact-info";
 import Wrapper from "@/layout/wrapper";
-import HeaderTwo from "@/layout/headers/header-2";
-import Footer from "@/layout/footers/footer";
+import HeaderThree from "@/layout/headers/header-3";
+import FooterTwo from "@/layout/footers/footer-2";
 import CommonBreadcrumb from "@/components/breadcrumb/common-breadcrumb";
 
 const MailSuccessPage = () => {
   return (
     <Wrapper>
       <SEO
-        pageTitle="Quote Request Sent"
+        pageTitle="Order Received"
         description={seoDescriptions["mail-success"]}
       />
-      <HeaderTwo style_2={true} />
+      <HeaderThree />
       <CommonBreadcrumb
-        title="Quote Request Sent"
+        title="Order Received"
         subtitle="Thank you"
         center={true}
       />
@@ -28,10 +29,11 @@ const MailSuccessPage = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8 text-center">
               <div className="tp-checkout-place white-bg p-5">
-                <h2 className="mb-3">Thank you for your quote request</h2>
+                <h2 className="mb-3">Thank you for shopping with {siteInfo.companyName}</h2>
                 <p className="mb-4">
-                  We have received your request and will get back to you with a
-                  quote shortly.
+                  We have received your order and will contact you at the email
+                  address you provided to confirm details. For questions, email us
+                  at {contactInfo.email}.
                 </p>
                 <Link href="/shop" className="tp-checkout-btn">
                   Continue shopping
@@ -41,7 +43,7 @@ const MailSuccessPage = () => {
           </div>
         </div>
       </section>
-      <Footer primary_style={true} />
+      <FooterTwo />
     </Wrapper>
   );
 };

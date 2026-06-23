@@ -16,7 +16,7 @@ const CheckoutArea = () => {
       <div className="container">
         {cart_products.length === 0 && (
           <div className="text-center pt-50">
-            <h3 className="py-2">No items in cart to request a quote</h3>
+            <h3 className="py-2">Your cart is empty</h3>
             <Link href="/shop" className="tp-checkout-btn">
               Return to shop
             </Link>

@@ -16,7 +16,8 @@ const SEO = ({ pageTitle, description }) => (
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      <link rel="icon" href="/favicon.png" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
     </Head>
   </>
 );

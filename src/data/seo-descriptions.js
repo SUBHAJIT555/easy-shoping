@@ -1,14 +1,16 @@
 /**
- * Page-specific meta descriptions for SEO. All include Easy Unboxing brand.
- * Used with <SEO pageTitle="..." description={seoDescriptions.key} /> in pages.
+ * Page-specific meta descriptions for SEO.
+ * Brand values come from contact-info.js (single source of truth).
  */
-const brand = "Easy Unboxing";
+import contactInfo, { siteInfo } from "./contact-info";
+
+const brand = siteInfo.companyName;
 
 export const seoDescriptions = {
-  home: `${brand} - Your one-stop shop for tech, fashion, books, stationery & more.`,
-  shop: `Shop at ${brand}. Mobile accessories, smart gadgets, electronics, fashion, books, stationery and more.`,
-  about: `About ${brand}. Your one-stop shop for tech, fashion, books, stationery & more.`,
-  contact: `Contact ${brand}. Get in touch for orders, support and enquiries.`,
+  home: `${brand} - ${siteInfo.tagline}`,
+  shop: `Shop at ${brand} (${siteInfo.domain}). Mobile accessories, smart gadgets, electronics, fashion, books, stationery and more.`,
+  about: `About ${brand}. ${siteInfo.tagline}`,
+  contact: `Contact ${brand} at ${contactInfo.email}. Orders, support and enquiries for ${siteInfo.domain}.`,
   cart: `Your shopping cart at ${brand}. Review and checkout.`,
   checkout: `Secure checkout at ${brand}. Complete your order.`,
   wishlist: `Your wishlist at ${brand}. Save items for later.`,
@@ -18,7 +20,7 @@ export const seoDescriptions = {
   "cookie-policy": `${brand} Cookie Policy. How we use cookies on our website.`,
   "terms-and-conditions": `${brand} Terms and Conditions. Terms of use for our website and services.`,
   "return-policy": `${brand} Return and Refund Policy. How to return or exchange items.`,
-  "mail-success": `Thank you for contacting ${brand}. We will get back to you soon.`,
+  "mail-success": `Thank you for your order at ${brand}. We will confirm details by email soon.`,
   "404": `Page not found. Return to ${brand} home.`,
   "shop-category": `Browse by category at ${brand}. Mobile accessories, gadgets, fashion, books and more.`,
 };

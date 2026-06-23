@@ -23,9 +23,8 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      // Dev-only: cart/wishlist state can be large; avoids noisy 32ms warnings
-      serializableCheck: { warnAfter: 128 },
-      immutableCheck: { warnAfter: 128 },
+      serializableCheck: process.env.NODE_ENV === "production",
+      immutableCheck: process.env.NODE_ENV === "production",
     }).concat(apiSlice.middleware),
 });
 

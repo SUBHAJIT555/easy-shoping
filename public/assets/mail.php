@@ -75,7 +75,7 @@
 
         // FIXME: Update this to your desired email address.
 
-        $recipient = "mdsalim400@gmail.com";
+        $recipient = "info@easy-shoping.com";
 
 
 
@@ -87,7 +87,7 @@
 
         //Email Header
 
-        $head = " /// Theme_Pure Shofy HTML \\\ ";
+        $head = " /// Easy Shoping Contact Form \\\ ";
 
 
 

@@ -1,0 +1,65 @@
+.text-logo {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--tp-ff-heading, "Space Grotesk", system-ui, sans-serif);
+  font-size: 1.35rem;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &__easy {
+    font-weight: 500;
+    color: #1e40af;
+  }
+
+  &__shoping {
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  &--black {
+    .text-logo__easy,
+    .text-logo__shoping {
+      color: #0a0a0a;
+    }
+  }
+
+  &--light {
+    .text-logo__easy {
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .text-logo__shoping {
+      color: #fff;
+    }
+  }
+
+  &--sm {
+    font-size: 1.125rem;
+  }
+
+  &--lg {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.45rem;
+
+    &--sm {
+      font-size: 1.2rem;
+    }
+
+    &--lg {
+      font-size: 1.65rem;
+    }
+  }
+}
+
+.easyunbox-footer__logo .text-logo {
+  margin-bottom: 0.25rem;
+}
+
+.offcanvas__logo .text-logo {
+  font-size: 1.25rem;
+}

@@ -51,7 +51,7 @@ const CheckoutOrderArea = ({ checkoutData }) => {
           disabled={submitting}
           className="tp-checkout-btn w-100"
         >
-          {submitting ? "Sending…" : "Ask for Quote"}
+          {submitting ? "Placing order…" : "Place Order"}
         </button>
       </div>
     </div>

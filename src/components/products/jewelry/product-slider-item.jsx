@@ -34,10 +34,10 @@ const ProductSliderItem = ({ product }) => {
         <Image
           src={img || "/assets/img/product/product-1.jpg"}
           alt={title}
-          width={280}
-          height={280}
+          fill
+          sizes="(min-width: 1200px) 20vw, (min-width: 768px) 25vw, 50vw"
           className="easyunbox-product-card__img"
-          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          style={{ objectFit: "contain" }}
         />
         <div className="easyunbox-product-card__actions">
           <button

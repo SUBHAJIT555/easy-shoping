@@ -9,9 +9,7 @@ import { notifyError } from "@/utils/toast";
 import { submitToApi } from "@/lib/submit-api";
 
 /**
- * Quote-based checkout: collect billing + cart, POST to API, on success clear cart and redirect to /mail-success.
- * No payment, no shipping charges, no login.
- */
+ * Checkout: collect billing + cart, POST to API, on success clear cart and redirect to /mail-success.
 const useCheckoutSubmit = () => {
   const { cart_products } = useSelector((state) => state.cart);
   const { total } = useCartInfo();
@@ -31,7 +29,7 @@ const useCheckoutSubmit = () => {
     setError(null);
 
     if (!cart_products?.length) {
-      setError("Your cart is empty. Add items before requesting a quote.");
+      setError("Your cart is empty. Add items before checkout.");
       return;
     }
 

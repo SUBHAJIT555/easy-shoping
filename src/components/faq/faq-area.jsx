@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
-import contactInfo from '@/data/contact-info';
+import contactInfo, { siteInfo } from '@/data/contact-info';
 
 const faqData = (email) => [
   {
     id: 1,
-    question: 'How do I request a quote for jewelry?',
-    answer: 'Browse our Shop, add the items you are interested in to your cart, and use the "Request Quote" option at checkout. We will review your request and send you a personalized quote by email within 1–2 business days.',
+    question: 'How do I place an order?',
+    answer: `Browse our Shop, add items to your cart, and proceed to checkout. You can pay securely online and track your order status. For help, contact us at ${email}.`,
   },
   {
     id: 2,
-    question: 'Do you offer custom or personalized jewelry?',
-    answer: 'Yes. We can work with you on custom designs and personalization such as engraving. Please include your requirements when requesting a quote or contact us directly with your ideas.',
+    question: 'Do you offer free delivery?',
+    answer: 'Yes. We offer free delivery on orders over ₹499 across eligible locations. Delivery times and charges for other orders are shown at checkout.',
   },
   {
     id: 3,
     question: 'What is your shipping policy?',
-    answer: 'Shipping options and delivery times depend on your location and the items ordered. We will include shipping details and estimated delivery in your quote. Contact us for specific shipping questions.',
+    answer: 'Orders are typically processed within 1–2 business days. Delivery times depend on your location and the items ordered. You will receive tracking details once your order ships.',
   },
   {
     id: 4,
-    question: 'How can I contact you?',
-    answer: `You can reach us via the Contact page, by email at ${email}, or by phone. We are happy to help with quotes, product questions, or any other inquiries.`,
+    question: `How can I contact ${siteInfo.companyName}?`,
+    answer: `Reach us via the Contact page, by email at ${email}, or by phone at ${contactInfo.phone}. We are happy to help with orders, product questions, or any other enquiries.`,
   },
   {
     id: 5,
     question: 'What is your return or refund policy?',
-    answer: 'We want you to be fully satisfied. Our Refund Policy covers returns, exchanges, and refunds. Please see our Refund Policy page for eligibility, timeframes, and how to initiate a return.',
+    answer: `We want you to be fully satisfied with your purchase from ${siteInfo.companyName}. Our Return Policy covers returns, exchanges, and refunds within 7 days. Please see our Return Policy page for eligibility and steps.`,
   },
   {
     id: 6,
-    question: 'Do I need an account to request a quote?',
-    answer: 'No. We operate on a request-for-quote basis. You can add items to your cart and request a quote without creating an account. We will communicate with you via the contact details you provide.',
+    question: 'Do I need an account to shop?',
+    answer: 'No account is required to browse and place orders. Creating an account lets you save your wishlist and track orders more easily.',
   },
 ];
 
@@ -51,6 +51,9 @@ const FaqArea = () => {
               <div className="tp-terms-wrapper">
                 <div className="tp-section-title-wrapper-4 mb-50">
                   <h3 className="tp-section-title-4 mb-20">Frequently Asked Questions</h3>
+                  <p className="mb-0">
+                    Find answers to common questions about shopping at {siteInfo.companyName} ({siteInfo.domain}).
+                  </p>
                 </div>
                 <div className="tp-faq-content">
                   {faqs.map((item) => (

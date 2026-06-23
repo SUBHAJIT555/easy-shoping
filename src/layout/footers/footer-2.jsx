@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import contactInfo, { siteInfo } from '@/data/contact-info';
 import { Email, Location } from '@/svg';
-import logo from '@assets/img/logo/logo.svg';
+import TextLogo from '@/components/common/text-logo';
 import pay from '@assets/img/footer/footer-pay.png';
 import { submitToApi } from '@/lib/submit-api';
 import { notifyError, notifySuccess } from '@/utils/toast';
@@ -35,7 +35,7 @@ const FooterTwo = () => {
             <div className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
               <div className="easyunbox-footer__brand">
                 <Link href="/" className="easyunbox-footer__logo">
-                  <Image src={logo} alt={siteInfo.companyName} />
+                  <TextLogo variant="brand" size="lg" />
                 </Link>
                 <div className="easyunbox-footer__contact-block">
                   <p className="easyunbox-footer__contact-label">Got questions? Call us</p>

@@ -48,10 +48,10 @@ const ProductItem = ({ product }) => {
           <Image
             src={img || "/assets/img/product/product-1.jpg"}
             alt={title || "Product"}
-            width={284}
-            height={352}
+            fill
             sizes="(min-width: 992px) 25vw, 50vw"
-            style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            className="easyunbox-product-card__img"
+            style={{ objectFit: "contain" }}
           />
         </button>
         {outOfStock && (
