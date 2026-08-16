@@ -10,6 +10,7 @@ import { submitToApi } from "@/lib/submit-api";
 
 /**
  * Checkout: collect billing + cart, POST to API, on success clear cart and redirect to /mail-success.
+ */
 const useCheckoutSubmit = () => {
   const { cart_products } = useSelector((state) => state.cart);
   const { total } = useCartInfo();

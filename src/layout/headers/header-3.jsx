@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 // internal
 import TextLogo from '@/components/common/text-logo';
@@ -13,17 +14,22 @@ import useCartInfo from '@/hooks/use-cart-info';
 import { openCartMini } from '@/redux/features/cartSlice';
 
 const HeaderThree = () => {
+  const router = useRouter();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffCanvasOpen, setIsCanvasOpen] = useState(false);
   const { quantity } = useCartInfo();
   const { wishlist } = useSelector((state) => state.wishlist);
   const { sticky } = useSticky();
   const dispatch = useDispatch();
+  const isHome = router.pathname === '/';
+  const isSolidHeader = !isHome || sticky;
+  const headerClass = `tp-header-area tp-header-style-transparent-white tp-header-sticky has-dark-logo tp-header-height ${sticky ? 'header-sticky' : ''} ${isSolidHeader ? 'tp-header-solid' : 'tp-header-transparent'}`;
+
   return (
     <>
       <header>
-        <div id="header-sticky" className={`tp-header-area tp-header-style-transparent-white tp-header-transparent tp-header-sticky has-dark-logo tp-header-height ${sticky ? 'header-sticky' : ''}`}>
-          <div className="tp-header-bottom-3 pl-35 pr-35">
+        <div id="header-sticky" className={headerClass}>
+          <div className="tp-header-bottom-3 pl-15 pr-15 pl-xl-35 pr-xl-35">
             <div className="container-fluid">
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-6">
@@ -39,13 +45,13 @@ const HeaderThree = () => {
                   </div>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-6">
-                  <div className="tp-header-action d-flex align-items-center justify-content-end ml-50">
+                  <div className="tp-header-action d-flex align-items-center justify-content-end">
                     <div className="tp-header-action-item d-none d-sm-block">
                       <button onClick={() => setIsSearchOpen(true)} type="button" className="tp-header-action-btn tp-search-open-btn">
                         <Search />
                       </button>
                     </div>
-                    <div className="tp-header-action-item d-none d-sm-block">
+                    <div className="tp-header-action-item">
                       <Link href="/wishlist" className="tp-header-action-btn">
                         <WishlistTwo />
                         {wishlist?.length > 0 && (
@@ -53,7 +59,7 @@ const HeaderThree = () => {
                         )}
                       </Link>
                     </div>
-                    <div className="tp-header-action-item d-none d-sm-block">
+                    <div className="tp-header-action-item">
                       <button onClick={() => dispatch(openCartMini())} type="button" className="tp-header-action-btn cartmini-open-btn">
                         <CartTwo />
                         <span className="tp-header-action-badge">{quantity}</span>
@@ -72,17 +78,9 @@ const HeaderThree = () => {
         </div>
       </header>
 
-      {/* search bar start */}
       <SearchBar isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
-      {/* search bar end */}
-
-      {/* cart mini sidebar start */}
       <CartMiniSidebar />
-      {/* cart mini sidebar end */}
-
-      {/* off canvas start */}
       <OffCanvas isOffCanvasOpen={isOffCanvasOpen} setIsCanvasOpen={setIsCanvasOpen} categoryType="beauty" />
-      {/* off canvas end */}
     </>
   );
 };

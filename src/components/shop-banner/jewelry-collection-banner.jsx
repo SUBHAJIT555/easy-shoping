@@ -2,11 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteInfo } from "@/data/contact-info";
+import { encodeAssetPath } from "@/lib/assetPath";
 
 const HOME_PAGE_IMAGES = "/assets/images/HomePageImages";
 const COLLECTION_IMAGES = {
-  leftBg: `${HOME_PAGE_IMAGES}/TECH,FASHION&MORE.webp`,
-  rightThumb: `${HOME_PAGE_IMAGES}/Tech,Fashion,Books&More.webp`,
+  leftBg: encodeAssetPath(`${HOME_PAGE_IMAGES}/TECH,FASHION&MORE.webp`),
+  rightThumb: encodeAssetPath(`${HOME_PAGE_IMAGES}/Tech,Fashion,Books&More.webp`),
 };
 
 const JewelryCollectionBanner = () => {

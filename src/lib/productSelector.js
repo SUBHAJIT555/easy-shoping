@@ -1,6 +1,7 @@
 import seedrandom from 'seedrandom';
 import productsData from '@/constatns/products.json';
 import categoryData from '@/constatns/categoryData';
+import { encodeAssetPath } from '@/lib/assetPath';
 
 const TOTAL_PRODUCTS = 500;
 
@@ -147,6 +148,7 @@ export function selectProducts(siteNumber) {
   // ✅ clone source once so we can safely write flags
   const products = productsData.map((p) => ({
     ...p,
+    img: encodeAssetPath(p.img),
     // ensure flags always exist
     isNewArrival: false,
     isBestSelling: false,

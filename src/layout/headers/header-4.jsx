@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 // internal
-import { CartTwo, Menu, Search } from '@/svg';
+import { CartTwo, Menu, Search, WishlistTwo } from '@/svg';
 import Menus from './header-com/menus';
 import logo_white from '@assets/img/logo/logo-white.svg';
 import logo_dark from '@assets/img/logo/logo.svg';
@@ -18,6 +18,7 @@ const HeaderFour = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isOffCanvasOpen, setIsCanvasOpen] = useState(false);
   const { quantity } = useCartInfo();
+  const { wishlist } = useSelector((state) => state.wishlist);
   const { sticky } = useSticky();
   const dispatch = useDispatch();
   return (
@@ -50,7 +51,15 @@ const HeaderFour = () => {
                         <Search />
                       </button>
                     </div>
-                    <div className="tp-header-action-item d-none d-sm-block">
+                    <div className="tp-header-action-item">
+                      <Link href="/wishlist" className="tp-header-action-btn">
+                        <WishlistTwo />
+                        {wishlist?.length > 0 && (
+                          <span className="tp-header-action-badge">{wishlist.length}</span>
+                        )}
+                      </Link>
+                    </div>
+                    <div className="tp-header-action-item">
                       <button onClick={() => dispatch(openCartMini())} type="button" className="tp-header-action-btn cartmini-open-btn">
                         <CartTwo />
                         <span className="tp-header-action-badge">{quantity}</span>

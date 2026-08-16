@@ -4,8 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { siteInfo } from "@/data/contact-info";
 
-const HERO_BG =
-  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2400&auto=format&fit=crop";
+const HERO_BG = "/assets/img/hero/hero-easy-shoping.webp";
 
 const JewelryBanner = () => {
   return (
